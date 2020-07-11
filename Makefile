@@ -1,6 +1,6 @@
-str_functions.o:
-	gcc -o ./lib/str_functions.o -c ./src/str_functions.c -I./src
+libstr_functions.so:
+	gcc -shared ./src/str_functions.c -I./src -o ./lib/libstr_functions.so 
 
-all: str_functions.o
+all: libstr_functions.so
 
 
