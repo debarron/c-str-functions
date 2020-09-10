@@ -21,14 +21,14 @@
  * @param value This is the string to be duplicated
  * @return char* The duplicated string 
  */
-char *str_duplicate(char *value);
+char* str_duplicate(char* value);
 
-char *str_concat(char *str1, char *str2);
+char* str_concat(char* str1, char* str2);
 
-int str_count_occurrence(char *str, char c);
+int str_count_occurrence(char* str, char c);
 
-char **str_path_to_arr(char *path, int *array_n);
+char** str_path_to_arr(char* path, int* array_n);
 
-char *str_array_to_str(char **arr, int arr_lenght);
+char* str_array_to_str(char** arr, int arr_lenght);
 
 #endif

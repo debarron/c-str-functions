@@ -9,24 +9,24 @@
 
 #include "str_functions.h"
 
-char *str_duplicate(char *value){
+char* str_duplicate(char* value){
   int lenght = strlen(value);
 
-  char *new_str = (char *) malloc(sizeof(char) * lenght + 1);
+  char* new_str = (char*) malloc(sizeof(char) * lenght + 1);
   strcpy(new_str, value);
   new_str[lenght] = '\0';
   return new_str;
 }
 
-char *str_concat(char *str1, char *str2){
+char* str_concat(char* str1, char* str2){
   int lenght = strlen(str1) + strlen(str2);
-  char *new_str = (char *) malloc(sizeof(char) * (lenght + 1));
+  char* new_str = (char*) malloc(sizeof(char) * (lenght + 1));
 
   sprintf(new_str, "%s%s%s", str1, str2, "\0");
   return new_str;
 }
 
-int str_count_occurrence(char *str, char c){
+int str_count_occurrence(char* str, char c){
   int occurrences = 0;
 
   for(int i = 0; str[i] != '\0'; i++)
@@ -35,10 +35,10 @@ int str_count_occurrence(char *str, char c){
   return occurrences;
 }
 
-char **str_path_to_arr(char *path, int *array_n){
-  char **path_array = NULL;
-  char *ptr_path = NULL;
-  char *path_bak = str_duplicate(path);
+char** str_path_to_arr(char* path, int* array_n){
+  char** path_array = NULL;
+  char* ptr_path = NULL;
+  char* path_bak = str_duplicate(path);
   int lenght = strlen(path_bak);
   int i = 0;
 
@@ -59,9 +59,9 @@ char **str_path_to_arr(char *path, int *array_n){
   return path_array;
 }
 
-char *str_array_to_str(char **arr, int arr_lenght){
+char* str_array_to_str(char** arr, int arr_lenght){
   int str_lenght, current_pos;
-  char *str;
+  char* str;
 
   str_lenght = 1;
   for(int i = 0; i < arr_lenght; i++)
